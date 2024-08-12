@@ -38,13 +38,13 @@ src/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Anasmalik57/-GitHub-User-Avatar-Finder-Web-App.git
+   git clone https://github.com/Anasmalik57/GitHub-User-Avatar-Finder-Web-App.git
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd -GitHub-User-Avatar-Finder-Web-App
+   cd GitHub-User-Avatar-Finder-Web-App
    ```
 
 3. **Install dependencies:**
@@ -61,7 +61,7 @@ src/
    npm start
    ```
 
-2. **Open your browser and go to `http://localhost:3000` to view the app.**
+2. **Open your browser and go to `http://localhost:5173` to view the app.**
 
 3. **Enter a GitHub username or part of it in the search box and press "Get Avatar" to see the matching usernames and their avatars.**
 
