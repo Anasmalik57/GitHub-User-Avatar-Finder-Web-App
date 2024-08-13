@@ -1,6 +1,6 @@
 import "./App.css";
-import FetchData from "./components/fetchData/FetchData";
-import Search from "./components/Search/Search";
+import FetchData from "./components/FetchData/FetchData";
+
 
 function App() {
   return (

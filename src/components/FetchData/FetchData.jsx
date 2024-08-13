@@ -31,11 +31,7 @@ function FetchData() {
 
   return (
     <div className="fetch-data">
-      <Search
-        username={username}
-        setUsername={setUsername}
-        users={users}
-      />
+      <Search username={username} setUsername={setUsername} users={users} />
     </div>
   );
 }
