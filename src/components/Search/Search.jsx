@@ -7,6 +7,7 @@ function Search({ username, setUsername, users }) {
         type="text"
         placeholder="Enter GitHub Username"
         value={username}
+        className="para"
         onChange={(e) => setUsername(e.target.value)}
       />
 
@@ -19,7 +20,7 @@ function Search({ username, setUsername, users }) {
                 alt={user.login}
                 className="avatarImage"
               />
-              <p>{user.login}</p>
+              <p className="para">{user.login}</p>
             </div>
           ))
         ) : (
