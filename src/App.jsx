@@ -1,5 +1,5 @@
 import "./App.css";
-import FetchData from "./components/FetchData/FetchData";
+import FetchData from "./components/FetchData/FetchData.jsx";
 
 
 function App() {

@@ -23,7 +23,7 @@ function Search({ username, setUsername, users }) {
             </div>
           ))
         ) : (
-          <p>No users or Search Box Empty</p>
+          <p className="para">No users or Search Box Empty</p>
         )}
       </div>
     </div>
