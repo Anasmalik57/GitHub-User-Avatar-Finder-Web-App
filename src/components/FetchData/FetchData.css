@@ -1,0 +1,25 @@
+#loading {
+  width: 100%;
+  border: 2px solid black;
+  height: calc(70vh - 64px);
+  display: grid;
+  place-items: center;
+}
+
+#loader {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #e9e7dd;
+  border-left-color: rgb(187, 185, 185);
+  border-radius: 50%; /* Make it round */
+  animation: loading 1s linear infinite; /* Apply the animation */
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate fully for smooth looping */
+  }
+}

@@ -7,11 +7,13 @@ import useDebounce from "../../hooks/useDebounce.js"; // Import the custom hook
 function FetchData() {
   const [username, setUsername] = useState("");
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false); // Add loading state
   const debouncedUsername = useDebounce(username, 500); // 500ms debounce delay
 
   useEffect(() => {
     const fetchUsers = async () => {
       if (debouncedUsername) {
+        setLoading(true); // Set loading to true before starting fetch
         try {
           const response = await axios.get(
             `https://api.github.com/search/users?q=${debouncedUsername}`
@@ -20,6 +22,8 @@ function FetchData() {
         } catch (error) {
           console.error("Error fetching users:", error);
           setUsers([]); // Clear users if there's an error
+        } finally {
+          setLoading(false); // Set loading to false after fetch completes
         }
       } else {
         setUsers([]); // Clear users if input is empty
@@ -31,7 +35,13 @@ function FetchData() {
 
   return (
     <div className="fetch-data">
-      <Search username={username} setUsername={setUsername} users={users} />
+      {loading ? (
+        <p id="loading">
+          <span id="loader"></span>
+        </p> // Display loading message while fetching data
+      ) : (
+        <Search username={username} setUsername={setUsername} users={users} />
+      )}
     </div>
   );
 }
